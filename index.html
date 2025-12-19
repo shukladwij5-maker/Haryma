@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Tourism: Haryana & Manipur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+            }
+        }
+    </script>
+
+    <!-- TensorFlow.js and Handpose -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose@0.1.0/dist/handpose.min.js"></script>
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+
+    <!-- Webcam & Debug Overlay -->
+    <div id="cam-container">
+        <video id="webcam" playsinline></video>
+        <canvas id="output-canvas"></canvas>
+    </div>
+
+    <!-- UI Overlay -->
+    <div id="ui-layer">
+        <header id="app-header">
+            <div class="brand">
+                <span class="brand-title">Incredible India</span>
+                <span class="brand-subtitle">Haryana • Manipur</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="cam-status">Camera Inactive</span>
+            </div>
+        </header>
+
+        <div id="center-message">Initializing Experience...</div>
+
+        <div id="controls-bar">
+            <button id="btn-prev" class="nav-btn">
+                <span class="icon">←</span> Prev
+            </button>
+            <span class="divider"></span>
+            <div class="gesture-hint">
+                <span class="icon">👇</span> Index: Next • Middle: Prev
+            </div>
+            <span class="divider"></span>
+            <button id="btn-next" class="nav-btn">
+                Next <span class="icon">→</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Debug (Hidden by default) -->
+    <div id="debug-console"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

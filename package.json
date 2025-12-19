@@ -1,0 +1,14 @@
+{
+  "name": "brochure-app",
+  "version": "1.0.0",
+  "description": "3D Interactive Brochure",
+  "scripts": {
+    "dev": "http-server . -a 0.0.0.0 -p 8080 -c-1 --cors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
